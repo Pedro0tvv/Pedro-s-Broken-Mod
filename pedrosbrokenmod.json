@@ -1,0 +1,17 @@
+{
+  "id": "pedrosbrokenmod",
+  "name": "Pedro's broken mod",
+  "author": [
+    "Pedro"
+  ],
+  "description": "Custom jokers created with Joker Forge",
+  "prefix": "pedrosbr",
+  "main_file": "main.lua",
+  "version": "0.0.0~indev-1",
+  "priority": 100,
+  "badge_colour": "DC00F9FF",
+  "badge_text_colour": "006ECEFF",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0827c)"
+  ]
+}
