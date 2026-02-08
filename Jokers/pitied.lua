@@ -17,7 +17,7 @@ SMODS.Joker{ --Pitied
             [1] = 'When any {C:attention}Card{} is Scored',
             [2] = '{C:green}1 in 4{} of drawing 2 {C:attention}Cards{}',
             [3] = '{C:green}1 in 16{} of creating a random {C:dark_edition}Negative{} {C:attention}Joker{}',
-            [4] = '{C:green}1 in 32{} of applying {X:edition,C:yellow}^^^^^2{}'
+            [4] = '{C:green}1 in 32{} of applying {X:edition,C:red}^^^^^2{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
