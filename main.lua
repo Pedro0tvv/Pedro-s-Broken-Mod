@@ -24,19 +24,11 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
-SMODS.Atlas({
-    key = "CustomConsumables", 
-    path = "CustomConsumables.png", 
-    px = 71,
-    py = 95, 
-    atlas_table = "ASSET_ATLAS"
-})
-
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
 
-local jokerIndexList = {5,1,3,6,2,7,4}
+local jokerIndexList = {7,2,5,8,3,10,6,4,9,1}
 
 local function load_jokers_folder()
     local mod_path = SMODS.current_mod.path
@@ -50,32 +42,6 @@ local function load_jokers_folder()
     end
 end
 
-
-local consumableIndexList = {1}
-
-local function load_consumables_folder()
-    local mod_path = SMODS.current_mod.path
-    local consumables_path = mod_path .. "/consumables"
-    local files = NFS.getDirectoryItemsInfo(consumables_path)
-    local set_file_number = #files + 1
-    for i = 1, #files do
-        if files[i].name == "sets.lua" then
-            assert(SMODS.load_file("consumables/sets.lua"))()
-            set_file_number = i
-        end
-    end    
-    for i = 1, #consumableIndexList do
-        local j = consumableIndexList[i]
-        if j >= set_file_number then 
-            j = j + 1
-        end
-        local file_name = files[j].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("consumables/" .. file_name))()
-        end
-    end
-end
-
 local function load_rarities_file()
     local mod_path = SMODS.current_mod.path
     assert(SMODS.load_file("rarities.lua"))()
@@ -83,7 +49,6 @@ end
 
 load_rarities_file()
 load_jokers_folder()
-load_consumables_folder()
 SMODS.ObjectType({
     key = "pedrosbr_food",
     cards = {
@@ -100,20 +65,23 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
-    key = "pedrosbr_upedro_jokers",
+    key = "pedrosbr_pedrosbr_jokers",
     cards = {
-        ["j_pedrosbr_gobbly"] = true
+        ["j_pedrosbr_delfino"] = true,
+        ["j_pedrosbr_kristel"] = true,
+        ["j_pedrosbr_maximillianus"] = true,
+        ["j_pedrosbr_myssyli"] = true,
+        ["j_pedrosbr_nouri"] = true,
+        ["j_pedrosbr_randall"] = true,
+        ["j_pedrosbr_rusudana"] = true,
+        ["j_pedrosbr_tayeb"] = true
     },
 })
 
 SMODS.ObjectType({
-    key = "pedrosbr_pedrosbr_jokers",
+    key = "pedrosbr_upedro_jokers",
     cards = {
-        ["j_pedrosbr_kristel"] = true,
-        ["j_pedrosbr_myssyli"] = true,
-        ["j_pedrosbr_nouri"] = true,
-        ["j_pedrosbr_randall"] = true,
-        ["j_pedrosbr_tayeb"] = true
+        ["j_pedrosbr_gobbly"] = true
     },
 })
 
