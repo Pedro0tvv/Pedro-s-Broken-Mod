@@ -76,17 +76,6 @@ local function load_consumables_folder()
     end
 end
 
-function SMODS.current_mod.reset_game_globals(run_start)
-    local jokerPool = {}
-    for k, v in pairs(G.P_CENTERS) do
-        if v.set == 'Joker' then
-            if (not v.mod) then
-                G.GAME.banned_keys[k] = true
-            end
-        end
-    end
-end
-
 local function load_rarities_file()
     local mod_path = SMODS.current_mod.path
     assert(SMODS.load_file("rarities.lua"))()
