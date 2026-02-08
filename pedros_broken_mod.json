@@ -7,7 +7,7 @@
   "description": "Custom jokers created with Joker Forge",
   "prefix": "pedrosbr",
   "main_file": "main.lua",
-  "version": "0.0.0~indev-2",
+  "version": "0.0.0~indev-3",
   "priority": 100,
   "badge_colour": "DC00F9FF",
   "badge_text_colour": "006ECEFF",
