@@ -18,8 +18,8 @@ SMODS.Joker{ --Delfino
         }
     },
     pos = {
-        x = 0,
-        y = 0
+        x = 8,
+        y = 1
     },
     display_size = {
         w = 71 * 1, 
@@ -32,11 +32,11 @@ SMODS.Joker{ --Delfino
     perishable_compat = true,
     unlocked = true,
     discovered = true,
-    atlas = 'Joker',
-    pools = { ["modprefix_pedrosbr_jokers"] = true },
+    atlas = 'CustomJokers',
+    pools = { ["pedrosbr_pedrosbr_jokers"] = true },
     soul_pos = {
-        x = 1,
-        y = 0
+        x = 9,
+        y = 1
     },
     
     calculate = function(self, card, context)

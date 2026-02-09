@@ -12,7 +12,7 @@ SMODS.Joker{ --Nouri
         ['name'] = 'Nouri',
         ['text'] = {
             [1] = 'When a {C:attention}Card{} is {C:attention}Scored{} Retrigger',
-            [2] = 'it {C:attention}6{} Times and give {X:edition,C:blue}^^^^^^^^^^1.01{}'
+            [2] = 'it {C:attention}6{} Times and give {X:edition,C:blue}[10]1.01{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
