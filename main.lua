@@ -24,11 +24,19 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
+SMODS.Atlas({
+    key = "CustomBoosters", 
+    path = "CustomBoosters.png", 
+    px = 71,
+    py = 95, 
+    atlas_table = "ASSET_ATLAS"
+})
+
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
 
-local jokerIndexList = {7,2,5,8,3,10,6,4,9,1}
+local jokerIndexList = {7,2,5,8,3,11,6,4,9,10,1,12}
 
 local function load_jokers_folder()
     local mod_path = SMODS.current_mod.path
@@ -48,6 +56,13 @@ local function load_rarities_file()
 end
 
 load_rarities_file()
+
+local function load_boosters_file()
+    local mod_path = SMODS.current_mod.path
+    assert(SMODS.load_file("boosters.lua"))()
+end
+
+load_boosters_file()
 load_jokers_folder()
 SMODS.ObjectType({
     key = "pedrosbr_food",
@@ -74,7 +89,9 @@ SMODS.ObjectType({
         ["j_pedrosbr_nouri"] = true,
         ["j_pedrosbr_randall"] = true,
         ["j_pedrosbr_rusudana"] = true,
-        ["j_pedrosbr_tayeb"] = true
+        ["j_pedrosbr_splef"] = true,
+        ["j_pedrosbr_tayeb"] = true,
+        ["j_pedrosbr_unlejos"] = true
     },
 })
 
