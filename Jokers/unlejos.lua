@@ -12,7 +12,8 @@ SMODS.Joker{ --Unlejos
         ['text'] = {
             [1] = 'When a {C:attention}Hand{} is {C:attention}Played{}',
             [2] = 'Give {X:edition,C:blue}^^{} Of {C:blue}Chips{} By',
-            [3] = 'each the {C:edition}Day{} of the {C:dark_edition}Year{}'
+            [3] = 'what day It is of',
+            [4] = '{C:edition}Day{} of the {C:dark_edition}Year{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
